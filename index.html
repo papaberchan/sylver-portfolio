@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sylver Lopez Fuentes — Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Sylver Lopez Fuentes — designer & programmer, 4th year college student."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#">
+          <img src="img/profile-small.jpg" alt="Profile" class="avatar" />
+          <span class="name">Sylver Lopez Fuentes</span>
+        </a>
+        <button
+          id="nav-toggle"
+          class="nav-toggle"
+          aria-label="Toggle navigation"
+        >
+          ☰
+        </button>
+        <nav id="main-nav" class="nav">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <div class="hero-text">
+            <h1>Hi, I'm <span class="accent">Sylver Lopez Fuentes</span>.</h1>
+            <p class="lead">
+              I build accessible, performant web apps and delightful UIs. I
+              enjoy practical projects while I complete my degree and grow my
+              skills.
+            </p>
+            <p>
+              <a class="btn" href="#projects">View Projects</a>
+              <a class="btn btn-alt" href="#contact">Contact</a>
+            </p>
+          </div>
+          <div class="hero-visual">
+            <img src="img/profile.jpg" alt="Your avatar" class="avatar-large" />
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <h2>About</h2>
+          <p>
+            Hi I'm <strong>Sylver Lopez Fuentes</strong>, a 22-year-old 4th year
+            college student with an interest in design and technology. I enjoy
+            creating clean and user-friendly designs, and I have basic
+            programming skills that I'm continuously improving through personal
+            and academic projects.
+          </p>
+
+          <p>
+            While I'm still learning and growing as a developer, I enjoy
+            building simple web applications, exploring new technologies, and
+            gaining hands-on experience through real-world projects. This
+            portfolio showcases some of the work I've created throughout my
+            learning journey.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="section bg-light">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="grid">
+            <article class="card">
+              <h3>Project One — Bakery Website</h3>
+              <p>
+                Built a responsive website for a local bakery. Implemented
+                product pages, a simple ordering interface, and a gallery. Tech:
+                HTML, CSS, JavaScript.
+              </p>
+              <p>
+                <a href="#" target="_blank">Live</a> •
+                <a href="#" target="_blank">Source</a>
+              </p>
+            </article>
+
+            <article class="card">
+              <h3>Project Two — E‑commerce Furniture Site</h3>
+              <p>
+                Developed an e‑commerce site for selling furniture with product
+                listings, shopping cart UI, and responsive layouts. Tech: HTML,
+                CSS, basic JS.
+              </p>
+              <p><a href="#">Live</a> • <a href="#">Source</a></p>
+            </article>
+
+            <article class="card">
+              <h3>Project Three — IoT Hardware System</h3>
+              <p>
+                Worked on developing an IoT hardware system combining sensors
+                and a small web dashboard for monitoring. Focused on prototyping
+                and basic data visualization.
+              </p>
+              <p><a href="#">Live</a> • <a href="#">Source</a></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section">
+        <div class="container">
+          <h2>Skills</h2>
+          <ul class="skills">
+            <li>JavaScript / TypeScript</li>
+            <li>React / Vue</li>
+            <li>HTML & CSS (Sass, PostCSS)</li>
+            <li>Node.js / Python</li>
+            <li>Testing & CI</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="contact" class="section bg-light">
+        <div class="container">
+          <h2>Contact</h2>
+          <p>No form — contact me directly using the details below.</p>
+          <ul class="contact-list">
+            <li>
+              <strong>Email:</strong>
+              <a href="mailto:sylvercool13@gmail.com">sylvercool13@gmail.com</a>
+            </li>
+            <li><strong>Phone:</strong> 09276461910</li>
+            <li>
+              <strong>Facebook:</strong>
+              <a
+                href="https://www.facebook.com/profile.php?id=61588164493495"
+                target="_blank"
+                rel="noopener"
+                >facebook.com/sylver.profile</a
+              >
+            </li>
+            <li>
+              <strong>Instagram:</strong>
+              <a
+                href="https://www.instagram.com/sylver.agx?igsh=MTQxczUzYXV3NW51ZQ%3D%3D"
+                target="_blank"
+                rel="noopener"
+                >@sylver.agx</a
+              >
+            </li>
+            <li>
+              <strong>TikTok:</strong>
+              <a
+                href="https://www.tiktok.com/@sylver.ag?_r=1&_t=ZS-970oUf0ryh2"
+                target="_blank"
+                rel="noopener"
+                >@sylver.ag</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          © <span id="year"></span> Your Name — <a href="#">GitHub</a> •
+          <a href="#">LinkedIn</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

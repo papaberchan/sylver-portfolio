@@ -1,0 +1,231 @@
+/* Simple responsive portfolio styles (light, modern palette) */
+:root {
+  /* Dark theme palette */
+  --bg: #071026; /* deep navy background */
+  --card: #0b1220; /* card / panel background */
+  --muted: #98a0b3; /* muted text (lightened) */
+  --accent: #ff7a59; /* coral accent */
+  --accent-2: #6f5af8; /* indigo accent */
+  --text: #e6eef8; /* light text for contrast */
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  /* animated, darker gradient background */
+  background: linear-gradient(270deg, #071026 0%, #0b1220 50%, #071026 100%);
+  background-size: 200% 200%;
+  animation: gradientShift 40s linear infinite;
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+.site-wrapper > header,
+.site-wrapper > main,
+.site-wrapper > footer,
+header,
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}
+
+/* subtle vignette overlay to darken edges */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  mix-blend-mode: multiply;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: inline-block;
+}
+.avatar-large {
+  width: 160px;
+  height: 160px;
+  border-radius: 12px;
+  border: 2px solid rgba(15, 23, 36, 0.06);
+  object-fit: cover;
+}
+.name {
+  font-weight: 700;
+}
+.nav {
+  display: flex;
+  gap: 1rem;
+}
+.nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: var(--text);
+  font-size: 1.4rem;
+}
+
+.hero {
+  padding: 4rem 0;
+}
+.hero-inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.hero-text {
+  flex: 1;
+}
+.lead {
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+.accent {
+  color: var(--accent);
+}
+.btn {
+  display: inline-block;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.btn-alt {
+  background: transparent;
+  border: 1px solid rgba(15, 23, 36, 0.06);
+  margin-left: 0.5rem;
+  color: var(--text);
+}
+
+.section {
+  padding: 3rem 0;
+}
+.bg-light {
+  background: rgba(15, 23, 36, 0.02);
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.card {
+  background: var(--card);
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6);
+}
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.skills li {
+  background: rgba(15, 23, 36, 0.03);
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+}
+
+.contact-form {
+  max-width: 560px;
+}
+.contact-form label {
+  display: block;
+  margin-bottom: 1rem;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid rgba(15, 23, 36, 0.06);
+  background: transparent;
+  color: var(--text);
+}
+
+.site-footer {
+  padding: 2rem 0;
+  border-top: 1px solid rgba(15, 23, 36, 0.06);
+  color: var(--muted);
+}
+.footer-inner {
+  display: flex;
+  justify-content: center;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .hero-inner {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .nav {
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .avatar-large {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+/* Utilities */
+.text-muted {
+  color: var(--muted);
+}
